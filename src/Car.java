@@ -45,6 +45,21 @@ public class Car {
 	}
 	
 	/**
+	 * Decelerates the car to a specified speed.
+	 * Cannot be lower than 0.
+	 * 
+	 * @param amount	The amount the car will decelerate
+	 */
+	public void decelerate(int amount) {
+		int limit = 0;
+		if(amount <= limit){
+		  this.speed = limit;
+		}else{
+		  this.speed-= amount;
+		}
+	}
+	
+	/**
 	 * Displays the object as a string in the format
 	 * "Color: red, Speed: 100"
 	 */
