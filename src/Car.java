@@ -24,6 +24,13 @@ public class Car {
 	};
 	
 	/**
+	 * Return the current color of the car
+	 */
+	public String getColor(){
+		return(this.color);
+	}
+	
+	/**
 	 * Accelerates the car up to the maximum amount
 	 * set in the object constructor.
 	 * @param amount	The amount the car will accelerate
@@ -42,8 +49,7 @@ public class Car {
 	 * "Color: red, Speed: 100"
 	 */
 	public String toString(){
-		// not implemented!
-		return("");
+		return("Color: " + getColor() + ", Speed: " + getSpeed());
 	}
 
 }
