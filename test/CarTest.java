@@ -31,6 +31,7 @@ public class CarTest {
 		assertThat(car1.toString(), is("Color: Red, Speed: 0"));
 	}
 
+	@Test
 	public void canDecelerate(){
 		Car car1 = new Car("Red", 100);
 		car1.accelerate(50);
@@ -38,7 +39,12 @@ public class CarTest {
 		assertThat(car1.getSpeed(), is(40));
 	}
 	
-	// Create and pass test for no deceleration below 0.
+	@Test
+	public void cannotDecelerateBeyondMaxSpeed(){
+		Car car1 = new Car("Red", 100);
+		car1.decelerate(50);
+		assertThat(car1.getSpeed(), is(0));
+	}
 
 	
 }
